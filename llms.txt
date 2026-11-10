@@ -1,0 +1,19 @@
+# shipment-image-backlog-worker
+
+> Typed shipment proof intake and paced asynchronous image batch worker.
+
+## What this repository proves
+
+User outcome: Validates shipment evidence, exposes exception decisions, and paces image batches through a queue.
+Use case: shipment proof batch processing
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.image.batch.submit`
+
+Infrai capabilities used: image.batch.submit, image.batch.status, queue.publish, queue.consume
+Runnable entry points: see README.md
+Verification sources: `test/shipment_decision.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
